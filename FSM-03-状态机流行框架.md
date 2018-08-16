@@ -6,18 +6,16 @@
 
 ####  一、[spring statemachine](http://projects.spring.io/spring-statemachine/#quick-start)
 
-1. 优点
-
-- 配置状态以及转移需要的事件，采用层次化状态机结构简化复杂状态配置，比原有实现方式更加解耦合，逻辑更加清晰，方便维护
-- 可定义状态转移需要执行的action
-- 基于ZooKeeper实现的分布式状态机 
-- 内置redis存储
-- 有事件监听器 
-
-2. 缺点
-
-- 单例statemachine状态机实例较重，状态转移依赖statemachine，不支持并发
-- 工厂模式会中statemachine会存储context
+- 优点
+  - 配置状态以及转移需要的事件，采用层次化状态机结构简化复杂状态配置，比原有实现方式更加解耦合，逻辑更加清晰，方便维护
+  - 可定义状态转移需要执行的action
+  - 基于ZooKeeper实现的分布式状态机 
+  - 内置redis存储
+  - 有事件监听器 
+  - 容易集成spring
+- 缺点
+  - 单例statemachine状态机实例较重，状态转移依赖statemachine，不支持并发
+  - 工厂模式会中statemachine会存储context
 
 3. 实现方式
 
@@ -85,12 +83,6 @@ squirrel的事件处理模型与spring-statemachine比较类似，squirrel的事
 **结论**
 
 - stateless4j足够轻量，同步模型，在app中使用比较合适，但在服务端解决复杂业务场景上stateless4j确实略显单薄
-
-#### 四、DEMO演示
-
-​	详情在idea
-
-
 
 #### 参考链接
 
